@@ -245,7 +245,7 @@ class Setup {
 
                 try{
 
-                    new PDO("mysql:host=".$request->host.";dbname=".$request->name."", $request->user, $request->pass);
+                    new PDO("mysql:host={$request->host};port=25060;dbname={$request->name}", $request->user, $request->pass);
                     
                     $this->generateConfig($request);
 
