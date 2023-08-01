@@ -1,14 +1,8 @@
-# Ignore Production
-config.php
-/vendor
-/storage/cache
-/storage/plugins
-
 # Ignore Files Types
 *.psd
 *.db
 *.log
-*.zip
+*.DS_Store
 
 # Ignore Dev Environment
 /.dist
