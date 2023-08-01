@@ -13,5 +13,6 @@ config.php
 # Ignore Dev Environment
 /.dist
 /.vscode
+/.idea
 /public/content/*[.png,.jpg,.jpeg,.svg]
 workspace.code-workspace

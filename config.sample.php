@@ -25,7 +25,7 @@
   define('DBpassword', '__PASS__');        //  Your mySQL Password 
   define('DBprefix', '__PRE__');         // Prefix for your tables if you are using same db for multiple scripts
 
-  define('DBport', 25060);
+  define('DBport', 25060); // DO port
 
   // This is your base path. If you have installed this script in a folder, add the folder's name here. e.g. /folderName/
   define('BASEPATH', 'AUTO');
