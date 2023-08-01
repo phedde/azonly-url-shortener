@@ -1,0 +1,140 @@
+.grid-view-loading
+{
+	background:url(../images/loading.gif) no-repeat;
+}
+
+.grid-view
+{
+	padding: 20px 0 2px 0;
+}
+
+.grid-view table.items
+{
+	background: white;
+	border-collapse: collapse;
+	width: 100%;
+	padding:0;
+}
+
+
+.grid-view table.items th, .grid-view table.items td
+{
+	border: 1px solid #d3d3d3;
+	padding: 8px 20px;
+}
+
+.grid-view table.items td input
+{
+	padding:0 !important;
+}
+
+.grid-view table.items th
+{
+	background: rgb(249,249,249); /* Old browsers */
+	background: -moz-linear-gradient(top, rgb(249,249,249) 0%, rgb(241,241,241) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(249,249,249)), color-stop(100%,rgb(241,241,241))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgb(249,249,249) 0%,rgb(241,241,241) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgb(249,249,249) 0%,rgb(241,241,241) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgb(249,249,249) 0%,rgb(241,241,241) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgb(249,249,249) 0%,rgb(241,241,241) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#f1f1f1',GradientType=0 ); /* IE6-9 */
+	border:1px solid #d3d3d3;
+}
+
+.grid-view table.items th a
+{
+	color: #656565;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.grid-view table.items th a:hover
+{
+	color: #1C1C1C;
+}
+
+.grid-view table.items th a.asc
+{
+	background:url(../images/up.gif) right center no-repeat;
+	padding-right: 15px;
+}
+
+.grid-view table.items th a.desc
+{
+	background:url(../images/down.gif) right center no-repeat;
+	padding-right: 15px;
+}
+
+a.update {
+	margin-right:5px;
+}
+
+.grid-view table.items tr.even
+{
+	background: #FFF;
+}
+
+.grid-view table.items tr.odd
+{
+	background: #F8F8F8;
+}
+
+/*.grid-view table.items tr.selected
+{
+	background: #BCE774;
+}*/
+
+.grid-view table.items tbody tr:hover
+{
+	background: #E8E8E8;
+}
+
+.grid-view .link-column img
+{
+	border: 0;
+}
+
+.grid-view .button-column
+{
+	text-align: center;
+	width: 60px;
+}
+
+.grid-view .button-column img
+{
+	border: 0;
+}
+
+.grid-view .checkbox-column
+{
+	width: 15px;
+}
+
+.grid-view .summary
+{
+	margin: 0 0 5px 0;
+	text-align: right;
+}
+
+.grid-view .pager
+{
+	margin: 20px 0 0 0;
+	text-align: right;
+}
+
+.grid-view .empty
+{
+	font-style: italic;
+}
+
+.grid-view .filters input,
+.grid-view .filters select
+{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+.grid-view table.items th#yw0_c0 {
+	width:60px;
+	text-align:center;
+}
