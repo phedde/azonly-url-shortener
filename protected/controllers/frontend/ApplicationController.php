@@ -47,11 +47,11 @@ class ApplicationController extends FrontEndController
         if(!$form->validate()) {
             $this->_response(array('error'=>true));
         }
+	$url = $form->url;
 	$hosturl = parse_url($url)['host'];
 	if(!$this->foundAmazonHostname($hosturl, $this->getAmazonHostnames())) {
 		$this->_response(array('error'=>true));
 	}
-        $url = $form->url;
         try {
             $model = Shortlink::insertNewLink($url);
         } catch (Throwable $t) {
