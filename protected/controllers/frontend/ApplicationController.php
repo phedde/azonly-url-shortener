@@ -144,11 +144,7 @@ class ApplicationController extends FrontEndController
 			echo $error['message'];
 			exit(0);
 		}
-		
-		$this->render('error', array(
-			'title'=>$error['code'] == 404 ? Yii::t("app", "404_title") : $error['code'],
-			'description'=>$error['code'] == 404 ? Yii::t("app", "404_description") : $error['message'],
-		));
+        $this->redirect("/");
 	}
 
 	private function _response($response)
