@@ -53,7 +53,7 @@ return array(
 
     // Api settings
     'api.daily_limit'=>1000, // Set 0 to allow unlimited number of daily requests.
-    'api.enabled'=>true,
+    'api.enabled'=>false,
 
     // Admin settings
     'admin.login'=> getenv('ADMIN_USER'),
