@@ -5,7 +5,7 @@ $params = is_file($cfg_local) ? require $cfg_local : require $cfg_main;
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Url Shortener',
+	'name'=>'AZON.LY',
     'language'=>$params['app.default_language'],
     'timeZone'=>$params['app.timezone'],
 	'defaultController'=>'Application',
