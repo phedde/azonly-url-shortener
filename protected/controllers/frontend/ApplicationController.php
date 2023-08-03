@@ -47,6 +47,10 @@ class ApplicationController extends FrontEndController
         if(!$form->validate()) {
             $this->_response(array('error'=>true));
         }
+	$hosturl = parse_url($url)['host'];
+	if(!$this->foundAmazonHostname($hosturl, $this->getAmazonHostnames())) {
+		$this->_response(array('error'=>true));
+	}
         $url = $form->url;
         try {
             $model = Shortlink::insertNewLink($url);
@@ -62,6 +66,38 @@ class ApplicationController extends FrontEndController
                 "shortid"=>$model['UrlShort']
             ))
 		));
+	}
+
+	private function getAmazonHostnames() {
+		return ['amazon.ae',
+			'amazon.ca',
+			'amazon.cn',
+			'amazon.co.jp',
+			'amazon.com',
+			'amazon.com.au',
+			'amazon.com.mx',
+			'amazon.co.uk',
+			'amazon.de',
+			'amazon.es',
+			'amazon.eu',
+			'amazon.fr',
+			'amazon.in',
+			'amazon.it',
+			'amazon.nl',
+			'amazon.sa'
+		];
+	}
+
+	
+	private function foundAmazonHostname(string $haystack, array $needles, int $offset = 0): bool 
+	{
+	    foreach($needles as $needle) {
+	        if(strpos($haystack, $needle, $offset) !== false) {
+	            return true; // stop on first true result
+	        }
+	    }
+	
+	    return false;
 	}
 
 	public function actionRedirect($shortid = null)
