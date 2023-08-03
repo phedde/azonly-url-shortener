@@ -2,10 +2,10 @@
 return array(
     'app.timezone' => 'Europe/Berlin',
     'app.default_language' => 'en',
-    'app.host' => 'http://short.codecanyon',
+    'app.host' => getenv('HOST_URL'),
     'app.base_url' => '/',
-    'app.encryption_key' => 'WeYbhAska2ob5QDMae2VDtJoIbW5M1lz',
-    'app.validation_key' => 'LgbZen8Z5Rmg47tMJHhx2EiDCwPLm9nM',
+    'app.encryption_key' => getenv('ENCRYPTION_KEY'),
+    'app.validation_key' => getenv('VALIDATION_KEY'),
     'app.cookie_validation' => true,
     'app.long_redirect'=>0,
     'app.dec_point'=>'.',
@@ -14,20 +14,20 @@ return array(
     'app.show_popular'=>true,
     'app.recent_count'=>5,
     'app.popular_count'=>5,
-    'app.placeholder'=>'http://php8developer.com',
+    'app.placeholder'=>'https://azon.ly',
 
     // DB settings
-    'db.host' => 'localhost',
-    'db.dbname' => 'short',
-    'db.username' => 'homestead',
-    'db.password' => 'secret',
-    'db.port' => 3306,
+    'db.host' => getenv('DATABASE_HOST'),
+    'db.dbname' => getenv('DATABASE_NAME'),
+    'db.username' => getenv('DATABASE_USERNAME'),
+    'db.password' => getenv('DATABASE_PASSWORD'),
+    'db.port' => getenv('DATABASE_PORT'),
 
     // Url settings
     'url.show_script_name' => false,
 
     // Cookie law settings
-    'cookie_law.show' => true,
+    'cookie_law.show' => false,
     'cookie_law.link' => 'https://www.google.com/intl/{language}/policies/privacy/partners/',
     'cookie_law.theme' => 'light-floating',
     'cookie_law.expiry_days' => 365,
@@ -56,13 +56,13 @@ return array(
     'api.enabled'=>true,
 
     // Admin settings
-    'admin.login'=>'admin',
-    'admin.password'=>'admin',
-    'admin.name'=>'Administrator',
+    'admin.login'=> getenv('ADMIN_USER'),
+    'admin.password'=> getenv('ADMIN_PASS'),
+    'admin.name'=>'Admin',
 
     // Template settings
     'template.banner_top' => '',
     'template.banner_bottom' => '',
     'template.head' => '',
-    'template.footer' => '<p>Developed by <strong><a href="http://php8developer.com">PHP8 Developer</a></strong></p>',
+    'template.footer' => '<p>By <strong>azon.ly</strong></p>',
 );
